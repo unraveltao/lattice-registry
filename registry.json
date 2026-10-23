@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "name": "Lattice Registry",
+  "updated": "2026-10-23",
+  "widgets": [
+    {
+      "id": "lattice.clock",
+      "name": "Clock",
+      "description": "A large clock with the date; 12/24-hour and seconds are set per copy",
+      "author": "Lattice",
+      "icon": "icons/lattice.clock.svg",
+      "homepage": "https://github.com/unraveltao/lattice",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-23",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "url": "packages/lattice.clock-0.2.0.lattice",
+          "sha256": "168e697eb2718f023de445d917ddc27635b5e32ddabd0c96d65e4da6ac143fa3",
+          "size": 5623,
+          "signature": "d9b1cd97b9fb38b00104d65810670040b035449963fca0d2b2ee1c8ce7a6071e803ffab091cbae6ce524e2adaf9d7f80ce549f61243dcfc0ee6c5cd2ab75d00a",
+          "permissions": [
+            "clock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.countdown",
+      "name": "Countdown",
+      "description": "Counts down to a date, showing days, hours, minutes and seconds",
+      "author": "Lattice",
+      "icon": "icons/lattice.countdown.svg",
+      "homepage": "https://github.com/unraveltao/lattice",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-23",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "url": "packages/lattice.countdown-0.2.0.lattice",
+          "sha256": "9458ea94dd337f3b7977ded330740855d17f05c4154cfb08ff935903d36b91c9",
+          "size": 5242,
+          "signature": "477096bce171134b060473f8af445067d31443389ac5667cc8d826789325148aebfeced841ad885f0e33f4ceda698b8642f821d99c715e123a87f4e4861da009",
+          "permissions": [
+            "clock"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.note",
+      "name": "Note",
+      "description": "Jot something down; saved automatically to widget storage",
+      "author": "Lattice",
+      "icon": "icons/lattice.note.svg",
+      "homepage": "https://github.com/unraveltao/lattice",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-23",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.note-0.1.0.lattice",
+          "sha256": "cb25d26870dd6820643c0da455bfffa1b2d5475f37fa6e2cd6c996b32a36fe44",
+          "size": 5551,
+          "signature": "b5a193c575e544205635d8db5d98772d3c780225e3037345128c5d91af32224c50bdeee2689260fc482d8e2e9c85ebc093e6b75e547d6890f606b4d4f2019e07",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.media",
+      "name": "Now Playing",
+      "description": "Whatever Windows is playing, with play/pause, previous and next — reads and controls the system media session",
+      "author": "Lattice",
+      "icon": "icons/lattice.media.svg",
+      "homepage": "https://github.com/unraveltao/lattice",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-23",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.media-0.1.0.lattice",
+          "sha256": "878b9b4dd25020c6b73a2f54ce74ee468e01a9a23dd014d3bacf5288e310c812",
+          "size": 9111,
+          "signature": "6866a46c146e50b070abe45e808b29182ad4b118b273643e35a7319fa764cf55cf6a4220f5f9d23f29f421e110fb93f4fc35e326098d6e3a864884ee52aa6805",
+          "permissions": [
+            "media:control"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.sysmon",
+      "name": "System",
+      "description": "CPU, memory, disk and network throughput, sampled once a second by the platform",
+      "author": "Lattice",
+      "icon": "icons/lattice.sysmon.svg",
+      "homepage": "https://github.com/unraveltao/lattice",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-23",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.sysmon-0.1.0.lattice",
+          "sha256": "0dac959b272f787d60fa0b0d0608ee21f384c1890483885241c3b691b0ba7fba",
+          "size": 5913,
+          "signature": "0b32fa82f5f2e53972e111bb137f3d9412314fb964b40cf3af4080558e6e45587c45456b135ef09fcda9162f9155f68704ea3cba47a2930d9210ecc05b88240f",
+          "permissions": [
+            "system:monitor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.todo",
+      "name": "Todo",
+      "description": "A minimal to-do list: drag rows to reorder, red / amber / green priority dots, stored per widget",
+      "author": "Lattice",
+      "icon": "icons/lattice.todo.svg",
+      "homepage": "https://github.com/unraveltao/lattice",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-23",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "url": "packages/lattice.todo-0.2.0.lattice",
+          "sha256": "5653bfd9c087a55f3e3321f7f0bee6b2f8dd4e75984cec2da862e92e3fd8e522",
+          "size": 11522,
+          "signature": "8bd6fb86a5b2841bc6647d0fc5cb64786823df9eb2c031b012e7fff711bf0ba61b88408abe342c7a3cdd93178cd5f5e8ef092c5a6beef5e7fb71dad537372a01",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    }
+  ]
+}

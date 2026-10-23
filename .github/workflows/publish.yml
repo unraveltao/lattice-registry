@@ -1,0 +1,65 @@
+name: publish
+
+# 每次 push 到 main：重算目录 → 确认 registry.json 已经提交 → 部署到 Pages。
+#
+# 这里**不签名**，也拿不到私钥。签名是作者在自己机器上做的，sidecar 里带进来。
+# 这条边界是故意的：一旦 CI 能签名，密钥就得进仓库或进 Secrets，那"这把钥匙
+# 只有作者有"这个前提就没了。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # 校验每个包的签名，并把 packages/ 汇总成 registry.json
+      - name: Rebuild the index
+        run: node scripts/build.mjs
+
+      # 提交上来的 registry.json 必须和重新算出来的一致。
+      # 不一致说明有人改了包却没更新目录 —— 这时候宁可红，也别悄悄发出去。
+      - name: Check the committed index is current
+        run: git diff --exit-code registry.json
+
+      # 只发对外需要的东西：目录、包、图标。sidecar 和脚本不发。
+      - name: Assemble the site
+        run: |
+          mkdir -p _site/packages _site/icons
+          cp registry.json _site/
+          cp packages/*.lattice _site/packages/
+          cp icons/*.svg _site/icons/ 2>/dev/null || true
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

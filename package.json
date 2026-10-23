@@ -1,0 +1,13 @@
+{
+  "name": "lattice-registry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static widget catalogue for Lattice. No server, no dependencies.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "selftest": "node scripts/ed25519.mjs --selftest",
+    "serve": "node scripts/serve.mjs"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "published": "2026-10-23",
+  "publisher": {
+    "name": "Lattice",
+    "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+  },
+  "homepage": "https://github.com/unraveltao/lattice",
+  "signature": "6866a46c146e50b070abe45e808b29182ad4b118b273643e35a7319fa764cf55cf6a4220f5f9d23f29f421e110fb93f4fc35e326098d6e3a864884ee52aa6805"
+}

@@ -1,0 +1,8 @@
+# 私钥绝不进仓库
+.keys/
+*.key
+
+node_modules/
+.DS_Store
+Thumbs.db
+_site/

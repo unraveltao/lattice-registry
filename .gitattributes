@@ -1,0 +1,6 @@
+# registry.json 要和构建出来的字节完全一致（CI 用 `git diff --exit-code` 判定
+# 它是不是最新的），所以行尾必须钉死成 LF，不能让 Windows 的 autocrlf 改写它。
+* text=auto eol=lf
+
+# 包是二进制，别做任何转换 —— 一次转换就等于换了个哈希，签名全废
+*.lattice binary
