@@ -26,6 +26,14 @@ scripts/
 
 `registry.json` 里每个条目只写三样来自 sidecar 的东西（发布者、日期、签名），**其余字段全部从包里读**。目录和包不各写一份描述，就不会出现"目录说 0.2.0、包里是 0.1.0"这种装不上的情况。
 
+## 第一次部署（只做一次）
+
+1. 仓库 **Settings → Pages → Source** 选 **GitHub Actions**。
+2. push 到 `main`，等 Actions 跑完（约 30 秒）。
+3. 地址就是 `https://<用户名>.github.io/<仓库名>/registry.json`。
+
+第 1 步没法自动化：`GITHUB_TOKEN` 没有创建 Pages 站点的权限，`configure-pages` 的 `enablement: true` 会直接报 `Resource not accessible by integration`。点一次比每次红一条流水线强。
+
 ## 加一个组件
 
 前提：你已经有一个 `.lattice` 包。没有的话，在 Lattice 仓库里：

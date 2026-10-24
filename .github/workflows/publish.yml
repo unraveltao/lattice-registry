@@ -48,11 +48,11 @@ jobs:
           cp icons/*.svg _site/icons/ 2>/dev/null || true
           touch _site/.nojekyll
 
-      # enablement: true —— 仓库第一次跑的时候顺手把 Pages 建出来，
-      # 省掉"去 Settings 里点一下 Source"这一步。已经开着的仓库上这行是空操作。
+      # Pages 得先在这个仓库里开一次（Settings → Pages → Source: GitHub Actions）。
+      # 试过 `enablement: true` 让 CI 自己建：GITHUB_TOKEN 没有建 Pages 站点的
+      # 权限，直接 "Resource not accessible by integration"，整条流水线红。
+      # 一次性的人工开关比一个每次都红的自动尝试好。
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
