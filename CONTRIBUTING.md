@@ -14,6 +14,14 @@
 4. **重算目录**。`node scripts/build.mjs`。
 5. **提 PR**。写清这个组件干什么、要了哪些权限、为什么。
 
+上面五步是**没有 Lattice 源码也能走完**的路子（比如你在别的机器上只 clone 了这个仓库）。如果你就在 Lattice 仓库里干活，第 1 到 4 步有现成的一条命令：
+
+```bash
+npm run publish:widget -- public/widgets/lattice.note --key ../lattice-registry/.keys/publisher.key
+```
+
+它做完打包、签名、写 sidecar、重建 `registry.json`，最后把"改了哪几个文件、下一条 git 命令是什么"打出来。同一个目录重跑一次是幂等的 —— 不会因为把 sidecar 的日期改成今天而脏出一份空提交。
+
 ## 会被拒的情况
 
 - 签名验不过，或者 `publisher.key` 和这个 id 以前用的不是同一把。
