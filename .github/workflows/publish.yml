@@ -48,7 +48,11 @@ jobs:
           cp icons/*.svg _site/icons/ 2>/dev/null || true
           touch _site/.nojekyll
 
+      # enablement: true —— 仓库第一次跑的时候顺手把 Pages 建出来，
+      # 省掉"去 Settings 里点一下 Source"这一步。已经开着的仓库上这行是空操作。
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
