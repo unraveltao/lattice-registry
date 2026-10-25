@@ -159,29 +159,43 @@ function collect() {
   // 按 id 合并版本，保持"一个组件一条记录"
   const byId = new Map();
   for (const item of entries) {
-    const existing = byId.get(item.id);
-    if (!existing) {
-      byId.set(item.id, { ...item, versions: [item.version] });
+    const group = byId.get(item.id);
+    if (!group) {
+      byId.set(item.id, { publisher: item.publisher, items: [item] });
       continue;
     }
-    if (existing.publisher.key !== item.publisher.key) {
+    if (group.publisher.key !== item.publisher.key) {
       complain(`${item.id}: ${item.version.version} 和已收录版本的发布者钥匙不同 —— 同名组件只能由一个发布者维护`);
       continue;
     }
-    if (existing.versions.some((version) => version.version === item.version.version)) {
+    if (group.items.some((entry) => entry.version.version === item.version.version)) {
       complain(`${item.id}: 版本 ${item.version.version} 重复`);
       continue;
     }
-    existing.versions.push(item.version);
-    if (item.published > existing.published) existing.published = item.published;
+    group.items.push(item);
   }
 
   return [...byId.values()]
-    .map(({ version, ...entry }) => ({
-      ...entry,
-      versions: entry.versions.sort((a, b) => compareVersionsDesc(a.version, b.version)),
-    }))
-    .sort((a, b) => a.name.localeCompare(b.name, "zh-CN"));
+    .map(({ items }) => {
+      // 条目级字段（名字 / 描述 / 图标 / 主页）取**最新那一版**的清单。
+      // 以前取的是按文件名排在最前的那一版 —— 也就是最旧的：组件改了名、换了图标、
+      // 或者把文案写成 `{ zh, en }`，目录里都还是老的那一份，用户看到的永远是旧名字。
+      const newest = [...items].sort((a, b) => compareVersionsDesc(a.version.version, b.version.version))[0];
+      const { version: _newest, ...display } = newest;
+      return {
+        ...display,
+        published: items.reduce((latest, item) => (item.published > latest ? item.published : latest), ""),
+        versions: items.map((item) => item.version).sort((a, b) => compareVersionsDesc(a.version, b.version)),
+      };
+    })
+    // 名字可能是 `{ zh, en }`（组件作者写的双语文案），排序要挑一个标量出来
+    .sort((a, b) => sortName(a.name).localeCompare(sortName(b.name), "zh-CN"));
+}
+
+/** 双语名字给排序用：有 en 用 en，只有 zh 用 zh，字符串照旧 */
+function sortName(value) {
+  if (typeof value === "string") return value;
+  return String(value?.en ?? value?.zh ?? "");
 }
 
 function main() {

@@ -1,21 +1,128 @@
 {
   "schema": 1,
   "name": "Lattice Registry",
-  "updated": "2026-10-23",
+  "updated": "2026-10-25",
   "widgets": [
     {
-      "id": "lattice.clock",
-      "name": "Clock",
-      "description": "A large clock with the date; 12/24-hour and seconds are set per copy",
+      "id": "lattice.bookmarks",
+      "name": {
+        "zh": "收藏夹",
+        "en": "Bookmarks"
+      },
+      "description": {
+        "zh": "一个小货架：粘贴地址，点一下就在浏览器里打开",
+        "en": "A small shelf of links: paste an address, click it to open in your browser"
+      },
       "author": "Lattice",
-      "icon": "icons/lattice.clock.svg",
-      "homepage": "https://github.com/unraveltao/lattice",
+      "icon": "icons/lattice.bookmarks.svg",
       "publisher": {
         "name": "Lattice",
         "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
       },
-      "published": "2026-10-23",
+      "published": "2026-10-25",
       "versions": [
+        {
+          "version": "1.0.1",
+          "url": "packages/lattice.bookmarks-1.0.1.lattice",
+          "sha256": "f8ad2aca5456c81fdc8328b9496c272e2cd39b6d8fc5da920affc55e7720f2d7",
+          "size": 15134,
+          "signature": "b1b2e6e2cc05a6377c2e5be9b074ca87f1a9ed8bbf88aa6eccb72e465d0e6a84d4b266339183212ecb19ad9a6cf44824c8a12513fff8bf82695e38ae869ebf0e",
+          "permissions": [
+            "storage",
+            "shell:open"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.calculator",
+      "name": {
+        "zh": "计算器",
+        "en": "Calculator"
+      },
+      "description": {
+        "zh": "带历史记录的表达式计算器，外加 Base64 / URL 编码和 MD5",
+        "en": "An expression calculator with a running history, plus Base64 / URL encoding and MD5"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.calculator.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "url": "packages/lattice.calculator-0.1.2.lattice",
+          "sha256": "e0e6a0db7762538d4b5cefa1ddbba57fed09a48fea20462d2047588dd90b56a7",
+          "size": 16323,
+          "signature": "32d56ea0921d36fff812220a3802a058431bf7210476cb6086f09f90d8da683606cf0d55a0a513aaf2f9520bad3a98dc164c8da39a012ccdcb716e0895b6540f",
+          "permissions": [
+            "storage",
+            "clipboard:write"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.calendar",
+      "name": {
+        "zh": "日历",
+        "en": "Calendar"
+      },
+      "description": {
+        "zh": "月视图加自己的条目——点一天，写一行",
+        "en": "Month view with your own events — click a day, type a line"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.calendar.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "url": "packages/lattice.calendar-0.1.2.lattice",
+          "sha256": "efba42fe970fd3042d1055b8afe51ff3ce11de1ad89644ff928e0e8afb74d333",
+          "size": 13676,
+          "signature": "134dd1f77ec61067dbacff5e093622c1ebad7aa8c6ade7d714037aafbf1446d407949bce3e2d32e7586690c3500caff759af5f7eba997ef8983c4a6d76088301",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.clock",
+      "name": {
+        "zh": "时钟",
+        "en": "Clock"
+      },
+      "description": {
+        "zh": "大字时间加一行日期；12/24 小时制和秒数按每一份单独调",
+        "en": "A large clock with the date; 12/24-hour and seconds are set per copy"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.clock.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "url": "packages/lattice.clock-0.2.1.lattice",
+          "sha256": "44a3358420c79234ecb9c91460968cf8cccd62f20620e5d4f796e036e3c34c26",
+          "size": 8530,
+          "signature": "416d77a78da1296fc064064569afc21420efb6fa30c909b318fec9bfaf5e8d04b978f901ee3098f7c3fecc8c723ebffa35b3698c368f08e867de90a7a860b906",
+          "permissions": [
+            "clock"
+          ]
+        },
         {
           "version": "0.2.0",
           "url": "packages/lattice.clock-0.2.0.lattice",
@@ -29,18 +136,63 @@
       ]
     },
     {
-      "id": "lattice.countdown",
-      "name": "Countdown",
-      "description": "Counts down to a date, showing days, hours, minutes and seconds",
+      "id": "lattice.convert",
+      "name": {
+        "zh": "换算",
+        "en": "Convert"
+      },
+      "description": {
+        "zh": "长度、质量、温度、数据、时间和速度的单位换算 —— 两个方向都能算，边打边出结果",
+        "en": "Unit converter for length, mass, temperature, data, time and speed — both directions, live"
+      },
       "author": "Lattice",
-      "icon": "icons/lattice.countdown.svg",
-      "homepage": "https://github.com/unraveltao/lattice",
+      "icon": "icons/lattice.convert.svg",
       "publisher": {
         "name": "Lattice",
         "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
       },
-      "published": "2026-10-23",
+      "published": "2026-10-25",
       "versions": [
+        {
+          "version": "0.1.1",
+          "url": "packages/lattice.convert-0.1.1.lattice",
+          "sha256": "226596f57ee5692a20e1fc70e7df501b9722ac943f7286c8d474e18d88092f6a",
+          "size": 11356,
+          "signature": "27309c21fcafc4967b4400b453410404277a6323c9c878795d7c4b4e6f435ec126338eb1ab9231bb589fa6303505468cb1da208e0f447a6249d3652f48dfd508",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.countdown",
+      "name": {
+        "zh": "倒计时",
+        "en": "Countdown"
+      },
+      "description": {
+        "zh": "倒数到某一天，显示还剩多少天、小时、分钟和秒",
+        "en": "Counts down to a date, showing days, hours, minutes and seconds"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.countdown.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "url": "packages/lattice.countdown-0.2.1.lattice",
+          "sha256": "a3d1326426bca353195341dee26580422b6f4f607705252fdafde9d01fbd5258",
+          "size": 8052,
+          "signature": "1ffb833cfaca5043540cd383fc0affde387d3734c4521c105e7e8dce8941b6990f74bf5128bf371dbe75dbb3ad821d0debfbdbc29659b4c02409b23d01066703",
+          "permissions": [
+            "clock"
+          ]
+        },
         {
           "version": "0.2.0",
           "url": "packages/lattice.countdown-0.2.0.lattice",
@@ -54,18 +206,94 @@
       ]
     },
     {
-      "id": "lattice.note",
-      "name": "Note",
-      "description": "Jot something down; saved automatically to widget storage",
+      "id": "lattice.focus",
+      "name": {
+        "zh": "专注",
+        "en": "Focus"
+      },
+      "description": {
+        "zh": "一个守时的番茄钟：合上盖子再回来，时间还是对的",
+        "en": "A pomodoro timer that keeps its place: close the lid, come back, the clock is still right"
+      },
       "author": "Lattice",
-      "icon": "icons/lattice.note.svg",
-      "homepage": "https://github.com/unraveltao/lattice",
+      "icon": "icons/lattice.focus.svg",
       "publisher": {
         "name": "Lattice",
         "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
       },
-      "published": "2026-10-23",
+      "published": "2026-10-25",
       "versions": [
+        {
+          "version": "0.1.1",
+          "url": "packages/lattice.focus-0.1.1.lattice",
+          "sha256": "50b41c639f90d11e25f52af6724ed3a10aa4dec7e25c5146805d0ac2f980b526",
+          "size": 13400,
+          "signature": "179919249619e8011a3390b3650ba9c19aebc0dbb1fe87d1d318d9357fd3fb77455a4f5353a379c3c2c1e1664add25b3e89fe6c3245bde3e8333c5155e94ea0b",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.music",
+      "name": {
+        "zh": "音乐",
+        "en": "Music"
+      },
+      "description": {
+        "zh": "Windows 正在放什么，带播放 / 暂停、上一首和下一首 —— 还有一条实时的音量折线",
+        "en": "What Windows is playing, with play/pause, previous and next — plus a live trace of how loud it is"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.music.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "url": "packages/lattice.music-0.2.1.lattice",
+          "sha256": "d8d0ea922b76bbfb9d1730bf4daa17dff5b6a628b3fc894a5eb9c6ce9685c4d2",
+          "size": 18539,
+          "signature": "a13c218d1e2876147115eae2eb30de40592ae7f6e4dfb896212dbd252e747f8dd858709b104172db72115b32b08e279f75dc05ed26c589d724e76559afe13f05",
+          "permissions": [
+            "media:control",
+            "audio:level"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.note",
+      "name": {
+        "zh": "便签",
+        "en": "Note"
+      },
+      "description": {
+        "zh": "随手写点什么；自动存进组件存储",
+        "en": "Jot something down; saved automatically to widget storage"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.note.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "url": "packages/lattice.note-0.1.1.lattice",
+          "sha256": "80917346c350e0052a86655c9766c4c39b7c39cb2c808267f76f31337e6ca3e2",
+          "size": 8325,
+          "signature": "1a478857cc9601d1c31ee1ca9d2957f93f58aaf3b667eef546a638409b4bdc67d7c6c8039ec9b7541c932917891664ab2b6d93aada6c3158734fca52772bdb09",
+          "permissions": [
+            "storage"
+          ]
+        },
         {
           "version": "0.1.0",
           "url": "packages/lattice.note-0.1.0.lattice",
@@ -79,18 +307,63 @@
       ]
     },
     {
-      "id": "lattice.sysmon",
-      "name": "System",
-      "description": "CPU, memory, disk and network throughput, sampled once a second by the platform",
+      "id": "lattice.stopwatch",
+      "name": {
+        "zh": "秒表",
+        "en": "Stopwatch"
+      },
+      "description": {
+        "zh": "正计时，带计次 —— 卡片关着也接着走",
+        "en": "Counts up, with laps — keeps running while the card is closed"
+      },
       "author": "Lattice",
-      "icon": "icons/lattice.sysmon.svg",
-      "homepage": "https://github.com/unraveltao/lattice",
+      "icon": "icons/lattice.stopwatch.svg",
       "publisher": {
         "name": "Lattice",
         "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
       },
-      "published": "2026-10-23",
+      "published": "2026-10-25",
       "versions": [
+        {
+          "version": "0.1.2",
+          "url": "packages/lattice.stopwatch-0.1.2.lattice",
+          "sha256": "e49e9e44be82d5deec06c29627e243ab8bb8b4df31a7ad66a65aa41e2668b7c1",
+          "size": 10795,
+          "signature": "0e1c2d99d7fc648ab1e96fa050c131ff61b8e30b0960b0d2c6e8ea42193a671add867ca994244ff75c9fccf59c397fad28605df55f72e2beaf5b8f27d30d7707",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.sysmon",
+      "name": {
+        "zh": "系统",
+        "en": "System"
+      },
+      "description": {
+        "zh": "CPU 和内存各一个百分比，配一条一分钟的走势；还有逐核负载、提交量、磁盘剩余、网络和开机时长",
+        "en": "CPU and memory with a one-minute trace, per-core load, commit charge, disk space, network and uptime"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.sysmon.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "url": "packages/lattice.sysmon-0.2.1.lattice",
+          "sha256": "f92a66a50e265be12e79a6a7f8d10d56d7a581a20d6e2563d89477e71f49120e",
+          "size": 16261,
+          "signature": "c73acd5ffc5314e63d063c688580ccb361199b0fc1fc7f5119e834c2a7325fa917607399461f815f2286812c15d7268b162a35d1c55b756fc620c039eef09608",
+          "permissions": [
+            "system:monitor"
+          ]
+        },
         {
           "version": "0.1.0",
           "url": "packages/lattice.sysmon-0.1.0.lattice",
@@ -104,18 +377,63 @@
       ]
     },
     {
-      "id": "lattice.todo",
-      "name": "Todo",
-      "description": "A minimal to-do list: drag rows to reorder, red / amber / green priority dots, stored per widget",
+      "id": "lattice.timetable",
+      "name": {
+        "zh": "课程表",
+        "en": "Timetable"
+      },
+      "description": {
+        "zh": "一周的课程表：教室、颜色和一条实时的「现在」线——点任意空格加课",
+        "en": "A weekly class timetable with rooms, colours and a live now line — click any slot to add a class"
+      },
       "author": "Lattice",
-      "icon": "icons/lattice.todo.svg",
-      "homepage": "https://github.com/unraveltao/lattice",
+      "icon": "icons/lattice.timetable.svg",
       "publisher": {
         "name": "Lattice",
         "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
       },
-      "published": "2026-10-23",
+      "published": "2026-10-25",
       "versions": [
+        {
+          "version": "0.1.1",
+          "url": "packages/lattice.timetable-0.1.1.lattice",
+          "sha256": "5521522373036bcac669024992b6b2bc49e91c3f2cf4706d07e1b41a684ba165",
+          "size": 22995,
+          "signature": "3c12f0fa452d9073be358e31388514c0460f3181a93eb8382e1bd22dfe195dbf166a39f46bb207da0816f49d24078661f5101a261db467210620fc328581d70d",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.todo",
+      "name": {
+        "zh": "待办",
+        "en": "Todo"
+      },
+      "description": {
+        "zh": "极简待办清单：拖动排序，红 / 黄 / 绿优先级圆点，按组件保存",
+        "en": "A minimal to-do list: drag rows to reorder, red / amber / green priority dots, stored per widget"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.todo.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "url": "packages/lattice.todo-0.2.1.lattice",
+          "sha256": "2018e6517bb6e0e875ae96db908e193c01dde7032d02368904ca28803bcdf2d2",
+          "size": 14875,
+          "signature": "a439a380149476c00253dd3f86b3f8a62a33aa01aa457922d0103e9113b7fe3744c09c439062262d4652fddddb8fdea7a869a6581cab74fa696ccec38a2fe806",
+          "permissions": [
+            "storage"
+          ]
+        },
         {
           "version": "0.2.0",
           "url": "packages/lattice.todo-0.2.0.lattice",
@@ -123,6 +441,37 @@
           "size": 11522,
           "signature": "8bd6fb86a5b2841bc6647d0fc5cb64786823df9eb2c031b012e7fff711bf0ba61b88408abe342c7a3cdd93178cd5f5e8ef092c5a6beef5e7fb71dad537372a01",
           "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.weather",
+      "name": {
+        "zh": "天气",
+        "en": "Weather"
+      },
+      "description": {
+        "zh": "一个城市的当前天气，定时刷新；断网时留着上一次读数，照样读得懂",
+        "en": "Current conditions for one city, refreshed on a timer and kept readable when the network is gone"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.weather.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-25",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "url": "packages/lattice.weather-0.1.1.lattice",
+          "sha256": "737349b4488e0d726c07e7aca661efe788c3123c3bb4ce2766de41ffaad74a20",
+          "size": 18372,
+          "signature": "8f09b5867d0435ece551e5a166c8eedfa67ad97e7705a421b4bdaf2acc3f413c5dc2719319f13613e98385e09982be8be20002193cc5325d1ec3bcbe5ccf4a0c",
+          "permissions": [
+            "network",
             "storage"
           ]
         }
