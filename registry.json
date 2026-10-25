@@ -79,31 +79,6 @@
       ]
     },
     {
-      "id": "lattice.media",
-      "name": "Now Playing",
-      "description": "Whatever Windows is playing, with play/pause, previous and next — reads and controls the system media session",
-      "author": "Lattice",
-      "icon": "icons/lattice.media.svg",
-      "homepage": "https://github.com/unraveltao/lattice",
-      "publisher": {
-        "name": "Lattice",
-        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
-      },
-      "published": "2026-10-23",
-      "versions": [
-        {
-          "version": "0.1.0",
-          "url": "packages/lattice.media-0.1.0.lattice",
-          "sha256": "878b9b4dd25020c6b73a2f54ce74ee468e01a9a23dd014d3bacf5288e310c812",
-          "size": 9111,
-          "signature": "6866a46c146e50b070abe45e808b29182ad4b118b273643e35a7319fa764cf55cf6a4220f5f9d23f29f421e110fb93f4fc35e326098d6e3a864884ee52aa6805",
-          "permissions": [
-            "media:control"
-          ]
-        }
-      ]
-    },
-    {
       "id": "lattice.sysmon",
       "name": "System",
       "description": "CPU, memory, disk and network throughput, sampled once a second by the platform",
