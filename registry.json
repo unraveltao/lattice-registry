@@ -52,6 +52,17 @@
       "published": "2026-10-26",
       "versions": [
         {
+          "version": "0.9.2",
+          "url": "packages/lattice.pet-0.9.2.lattice",
+          "sha256": "49f7cb527b38e873aa91caaf8619ee2d7aeabb403bf951f355f322010d2cd517",
+          "size": 2886208,
+          "signature": "c511f81182154971a92a8d75dd53891508543f22bcdd383d2e19298d2fb927439c832b5360d543657b72670f1d8d324750fd27307214c5bade23490f6dffd802",
+          "permissions": [
+            "llm:chat",
+            "desktop:control"
+          ]
+        },
+        {
           "version": "0.9.1",
           "url": "packages/lattice.pet-0.9.1.lattice",
           "sha256": "3d4c43676a929f027a3256b284dadef11e7d67a9900f1f9a6a2bc4c9943b1b79",
@@ -499,14 +510,44 @@
       ]
     },
     {
+      "id": "lattice.term",
+      "name": {
+        "zh": "终端",
+        "en": "Terminal"
+      },
+      "description": {
+        "zh": "桌面上的一条真 PowerShell：每条命令约 40ms，cd 会保留，输出一行一行回来。不是终端模拟器，跑不了 vim/ssh",
+        "en": "A real PowerShell on your desktop: about 40ms per command, cd sticks, output arrives line by line. Not a terminal emulator: vim/ssh will not work"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.term.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-26",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.term-0.1.0.lattice",
+          "sha256": "912a9b1348a037f3842aadad79639e9853a471b4338f21ca2e376d0153fd970d",
+          "size": 13988,
+          "signature": "b52508fadd075db0c41c1c3db4468b26e6a2977d10dcebfc730c657e9c0833b2a3cd7b085a85fb16ea94efd6b3fa0193cdb14328a83402758b43e8a976febb0a",
+          "permissions": [
+            "terminal:exec"
+          ]
+        }
+      ]
+    },
+    {
       "id": "lattice.timetable",
       "name": {
         "zh": "课程表",
         "en": "Timetable"
       },
       "description": {
-        "zh": "一周的课程表：教室、颜色和一条实时的「现在」线——点任意空格加课",
-        "en": "A weekly class timetable with rooms, colours and a live now line — click any slot to add a class"
+        "zh": "一周的课程表：教室、颜色和一条实时的「现在」线——点空格加课，也可以把整张表粘进来",
+        "en": "A weekly class timetable with rooms, colours and a live now line — click a slot, or paste the whole week in"
       },
       "author": "Lattice",
       "icon": "icons/lattice.timetable.svg",
@@ -514,8 +555,18 @@
         "name": "Lattice",
         "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
       },
-      "published": "2026-10-25",
+      "published": "2026-10-26",
       "versions": [
+        {
+          "version": "0.2.0",
+          "url": "packages/lattice.timetable-0.2.0.lattice",
+          "sha256": "1a84abfbd6122da09b88622c9610d5c46d90b2429495e4914b21f0d210a0d1ac",
+          "size": 28008,
+          "signature": "4c8ac2863a84b49906626849d4ac95d931461d362d49cb0321570c4e4b6c0d96be6fd4c3b19981883de9e136315126d74bce7b4a32b4e4fafad3b09b0b3e270a",
+          "permissions": [
+            "storage"
+          ]
+        },
         {
           "version": "0.1.1",
           "url": "packages/lattice.timetable-0.1.1.lattice",
