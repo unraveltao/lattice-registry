@@ -1,8 +1,69 @@
 {
   "schema": 1,
   "name": "Lattice Registry",
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "widgets": [
+    {
+      "id": "lattice.battery",
+      "name": {
+        "zh": "电池",
+        "en": "Battery"
+      },
+      "description": {
+        "zh": "电量、充电状态和剩余时间；低于你设的那条线变警示色，台式机直说「没有电池」",
+        "en": "Battery level, charging state and time left; turns a warning colour below your line, and says so on a desktop with no battery"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.battery.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-26",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.battery-0.1.0.lattice",
+          "sha256": "3c04e286acf0933553b3762c383230c13cab8288f68577ffdcd2584ed77ccd95",
+          "size": 10923,
+          "signature": "2cd4df6ec92aa62c1932bf1d0073102c164e908086eea5ab6e54d3497ef0971509213d6109836d99131cc71e2d06088c2b0fcb7c6f1d9200b6504179b502d20c",
+          "permissions": [
+            "system:monitor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.pet",
+      "name": {
+        "zh": "大肥鱼",
+        "en": "Big Fishy"
+      },
+      "description": {
+        "zh": "一只住在桌面上的蓝色大肥鱼（鲸鱼娘）：会打招呼、害羞、生气、摆烂、睡觉，能拖着走、也会自己散步。三套衣服可换，只有她的身体挡鼠标，其余位置点得到桌面",
+        "en": "A blue whale girl living on your desktop: she greets you, gets shy, sulks, lazes around and sleeps. Drag her anywhere, and she wanders on her own. Three outfits; only her body blocks the mouse — everywhere else clicks through to the desktop"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.pet.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-26",
+      "versions": [
+        {
+          "version": "0.9.1",
+          "url": "packages/lattice.pet-0.9.1.lattice",
+          "sha256": "3d4c43676a929f027a3256b284dadef11e7d67a9900f1f9a6a2bc4c9943b1b79",
+          "size": 2885086,
+          "signature": "366c1e8cb0441c4968a103c60dcc22b0ccd68819e136c9b6ce069d5a12566a33f6ce0b7495ead62aadfcafd71af50df66ac6a096ea6908eef3cdfbe2b3410104",
+          "permissions": [
+            "llm:chat",
+            "desktop:control"
+          ]
+        }
+      ]
+    },
     {
       "id": "lattice.bookmarks",
       "name": {
@@ -206,6 +267,37 @@
       ]
     },
     {
+      "id": "lattice.diagram",
+      "name": {
+        "zh": "架构图",
+        "en": "Diagram"
+      },
+      "description": {
+        "zh": "一块能平移缩放的图面：矩形、圆、菱形、文本和曲线箭头，拖框线跟着走",
+        "en": "A pannable, zoomable canvas: boxes, circles, diamonds, text and curved arrows that follow the shapes"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.diagram.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-26",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.diagram-0.1.0.lattice",
+          "sha256": "bcebd4c88d581a41837e863d793d6ccdf11cdaca57d8596a3f39ab69246d457a",
+          "size": 24420,
+          "signature": "7c295b4a7818d550394baefa40dffe3b2963294b7f95666813cccedc8e3b6388a5d24772ecc073957254cd96b074ed02c94bd87bade685afb87b1ed5e650ca04",
+          "permissions": [
+            "storage",
+            "agent:tools"
+          ]
+        }
+      ]
+    },
+    {
       "id": "lattice.focus",
       "name": {
         "zh": "专注",
@@ -229,6 +321,36 @@
           "sha256": "50b41c639f90d11e25f52af6724ed3a10aa4dec7e25c5146805d0ac2f980b526",
           "size": 13400,
           "signature": "179919249619e8011a3390b3650ba9c19aebc0dbb1fe87d1d318d9357fd3fb77455a4f5353a379c3c2c1e1664add25b3e89fe6c3245bde3e8333c5155e94ea0b",
+          "permissions": [
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.habit",
+      "name": {
+        "zh": "习惯",
+        "en": "Habit"
+      },
+      "description": {
+        "zh": "一行一个习惯，点一格就记下那一天；连续天数自己算",
+        "en": "One habit per row — tap a cell to log the day; the streak counts itself"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.habit.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-26",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.habit-0.1.0.lattice",
+          "sha256": "96b99f3600e94237e323df94ac85d347f5346f5027843d3b38d26b835cb8c219",
+          "size": 12142,
+          "signature": "ef8237b9b4122e92e7f7868aacf24b8ba9abd7707638bbd95a97eb446e251dc9c14008b87b8dbaeb57bff2f7259435d058d9ce335e5cd36730192210472eec0c",
           "permissions": [
             "storage"
           ]
@@ -472,6 +594,36 @@
           "signature": "8f09b5867d0435ece551e5a166c8eedfa67ad97e7705a421b4bdaf2acc3f413c5dc2719319f13613e98385e09982be8be20002193cc5325d1ec3bcbe5ccf4a0c",
           "permissions": [
             "network",
+            "storage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lattice.anki",
+      "name": {
+        "zh": "背单词",
+        "en": "Word Drill"
+      },
+      "description": {
+        "zh": "间隔重复背单词：单词 / 音标 / 词性 / 释义 / 例句，四档打分，按天排下次复习",
+        "en": "Spaced repetition for vocabulary: word, IPA, part of speech, meaning and example, four grades, next review scheduled in days"
+      },
+      "author": "Lattice",
+      "icon": "icons/lattice.anki.svg",
+      "publisher": {
+        "name": "Lattice",
+        "key": "f842c1bffc52e48c1c5b3599242dee28a524c8cda3a31bca2b1baeef6d0fc56c"
+      },
+      "published": "2026-10-26",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "packages/lattice.anki-0.1.0.lattice",
+          "sha256": "1d766a7d03a4fc137bc031e31bf4a240abd50d1b7274315570d7165c074304e4",
+          "size": 21564,
+          "signature": "861ca8aead1093af96a831e8d3d94c125db7dcc70c1e04dddc85cc19cf76e02c5b49699556ba1fbe49c2ec848ff150140228dcc1ba1c5cf4b1a34f5cc0c16e0c",
+          "permissions": [
             "storage"
           ]
         }
