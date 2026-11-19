@@ -52,7 +52,7 @@ jobs:
       # 试过 `enablement: true` 让 CI 自己建：GITHUB_TOKEN 没有建 Pages 站点的
       # 权限，直接 "Resource not accessible by integration"，整条流水线红。
       # 一次性的人工开关比一个每次都红的自动尝试好。
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
       - uses: actions/upload-pages-artifact@v3
         with:
